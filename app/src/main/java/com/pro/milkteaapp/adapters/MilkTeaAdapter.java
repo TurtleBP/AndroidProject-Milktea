@@ -1,7 +1,6 @@
 package com.pro.milkteaapp.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.pro.milkteaapp.R;
 import com.pro.milkteaapp.models.MilkTea;
-import com.pro.milkteaapp.activity.ProductDetailActivity;
 import com.pro.milkteaapp.utils.MoneyUtils;
 
 import java.util.List;
@@ -21,10 +19,18 @@ import java.util.List;
 public class MilkTeaAdapter extends RecyclerView.Adapter<MilkTeaAdapter.ViewHolder> {
     private Context context;
     private List<MilkTea> milkTeaList;
+    private OnItemClickListener listener; // Khai báo listener
 
-    public MilkTeaAdapter(Context context, List<MilkTea> milkTeaList) {
+    // Interface để xử lý sự kiện click
+    public interface OnItemClickListener {
+        void onItemClick(MilkTea milkTea);
+    }
+
+    // Constructor mới nhận thêm tham số listener
+    public MilkTeaAdapter(Context context, List<MilkTea> milkTeaList, OnItemClickListener listener) {
         this.context = context;
         this.milkTeaList = milkTeaList;
+        this.listener = listener;
     }
 
     @NonNull
@@ -45,10 +51,11 @@ public class MilkTeaAdapter extends RecyclerView.Adapter<MilkTeaAdapter.ViewHold
                 .placeholder(R.drawable.ic_milk_tea)
                 .into(holder.image);
 
+        // Thêm lắng nghe sự kiện click cho mỗi item
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(context, ProductDetailActivity.class);
-            intent.putExtra("milkTea", milkTea);
-            context.startActivity(intent);
+            if (listener != null) {
+                listener.onItemClick(milkTea);
+            }
         });
     }
 

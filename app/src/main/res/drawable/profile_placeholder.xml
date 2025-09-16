@@ -1,22 +1,18 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="120dp"
-    android:height="120dp"
-    android:viewportWidth="120"
-    android:viewportHeight="120"
-    android:tint="@color/primary">
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="24" android:viewportHeight="24">
+    <!-- Vòng tròn ngoài -->
     <path
-        android:fillColor="@android:color/black"
-        android:pathData="M60,10A50,50 0,1 1,10 60,50 50,0 1,1 60,10z"/>
+        android:fillColor="#FFCCCCCC"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2z"/>
+
+    <!-- Đầu người -->
     <path
-        android:fillColor="@android:color/white"
-        android:pathData="M60,25A35,35 0,1 1,25 60,35 35,0 1,1 60,25z"/>
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M12,6a3,3 0,1 1,-0.01 0z"/>
+
+    <!-- Vai và thân -->
     <path
-        android:fillColor="@android:color/black"
-        android:pathData="M45,45A15,15 0,1 1,30 60,15 15,0 1,1 45,45z"/>
-    <path
-        android:fillColor="@android:color/black"
-        android:pathData="M75,45A15,15 0,1 1,60 60,15 15,0 1,1 75,45z"/>
-    <path
-        android:fillColor="@android:color/black"
-        android:pathData="M40,80A20,10 0,0 0,80 80,20 10,0 0,0 40,80z"/>
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M6,18c0,-2 4,-3 6,-3s6,1 6,3v1H6v-1z"/>
 </vector>

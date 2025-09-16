@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardCornerRadius="12dp"
-    app:cardElevation="4dp"
+    app:cardElevation="2dp"
+    android:fitsSystemWindows="true"
     app:strokeColor="@color/light_gray"
     app:strokeWidth="1dp">
 
@@ -19,8 +20,9 @@
             android:id="@+id/milkTeaImage"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             android:src="@drawable/ic_milk_tea"
+            android:background="@color/light_gray"
             android:contentDescription="@string/milk_tea_image"/>
 
         <TextView
@@ -31,7 +33,8 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:maxLines="1"
-            android:ellipsize="end"/>
+            android:ellipsize="end"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/milkTeaPrice"
@@ -42,8 +45,7 @@
             android:paddingBottom="8dp"
             android:textColor="@color/primary"
             android:textSize="14sp"
-            android:maxLines="1"
-            android:ellipsize="end"/>
+            android:textStyle="bold"/>
 
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
