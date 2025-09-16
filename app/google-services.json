@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1079967952612",
+    "firebase_url": "https://milktea-app-b67d8-default-rtdb.firebaseio.com",
+    "project_id": "milktea-app-b67d8",
+    "storage_bucket": "milktea-app-b67d8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079967952612:android:d5092883d69e8f7a0806f1",
+        "android_client_info": {
+          "package_name": "com.pro.shopfee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwffh3cuKMvCqRg4NS4l6cBo4HRy3Lbsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
