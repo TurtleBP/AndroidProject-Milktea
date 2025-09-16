@@ -280,4 +280,6 @@
     <string name="vnd_format">%1$sđ</string>
     <string name="vnd_format_with_price">%1$.0fđ</string>
     <string name="vnd_format_thousands">%1$.0f.000đ</string>
+    <string name="caidattaikhoan">Cài đặt tài khoản</string>
+    <string name="changepassword">Đổi mật khẩu</string>
 </resources>
